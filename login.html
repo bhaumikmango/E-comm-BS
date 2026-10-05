@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In / Register — Lumora</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="bg-light min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar bg-white border-bottom px-4 py-3">
+  <a class="navbar-brand brand-logo" href="../index.html">Lumora</a>
+  <a href="../index.html" class="btn btn-sm btn-outline-dark"><i class="bi bi-arrow-left me-1"></i>Back to shop</a>
+</nav>
+
+<div class="container py-5">
+  <div class="row justify-content-center align-items-start g-4">
+    <!-- Auth Tabs Card -->
+    <div class="col-md-10 col-lg-8">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="card-header bg-white border-0 pt-4 px-4">
+          <ul class="nav nav-pills gap-2" id="authTabs">
+            <li class="nav-item">
+              <button class="nav-link active px-4" data-bs-toggle="tab" data-bs-target="#loginTab">Sign In</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link px-4" data-bs-toggle="tab" data-bs-target="#registerTab">Create Account</button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body p-4 p-md-5">
+          <div class="tab-content">
+
+            <!-- Login Tab -->
+            <div class="tab-pane fade show active" id="loginTab">
+              <h4 class="fw-semibold mb-1">Welcome back</h4>
+              <p class="text-muted mb-4 small">Sign in to your Lumora account</p>
+
+              <!-- Social Login -->
+              <div class="d-grid gap-2 mb-4">
+                <button class="btn btn-outline-dark btn-lg">
+                  <i class="bi bi-google me-2"></i>Continue with Google
+                </button>
+                <button class="btn btn-outline-dark btn-lg">
+                  <i class="bi bi-facebook me-2"></i>Continue with Facebook
+                </button>
+              </div>
+              <div class="divider-text text-muted small mb-4">or sign in with email</div>
+
+              <form id="loginForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Email address</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                    <input type="email" class="form-control border-start-0 ps-0" id="loginEmail" placeholder="you@email.com" required />
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between">
+                    <label class="form-label fw-medium small">Password</label>
+                    <a href="#" class="small text-dark">Forgot password?</a>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                    <input type="password" class="form-control border-start-0 ps-0" id="loginPass" placeholder="••••••••" required minlength="8" />
+                    <button class="btn btn-light border toggle-pass" type="button" data-target="loginPass">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                  </div>
+                </div>
+                <div class="mb-4 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberMe" />
+                  <label class="form-check-label small" for="rememberMe">Keep me signed in for 30 days</label>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 btn-lg py-3">Sign In</button>
+              </form>
+
+              <!-- Success Alert (hidden) -->
+              <div class="alert alert-success mt-3 d-none" id="loginSuccess">
+                <i class="bi bi-check-circle me-2"></i>Signed in successfully! Redirecting…
+              </div>
+            </div>
+
+            <!-- Register Tab -->
+            <div class="tab-pane fade" id="registerTab">
+              <h4 class="fw-semibold mb-1">Create your account</h4>
+              <p class="text-muted mb-4 small">Join 50,000+ Lumora members</p>
+
+              <form id="registerForm" novalidate>
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <label class="form-label fw-medium small">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Priya" required pattern="[A-Za-z]+" />
+                    <div class="invalid-feedback">Enter a valid first name.</div>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fw-medium small">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Sharma" required pattern="[A-Za-z]+" />
+                    <div class="invalid-feedback">Enter a valid last name.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Email address</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                    <input type="email" class="form-control border-start-0 ps-0" id="regEmail" placeholder="you@email.com" required />
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Mobile number</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="tel" class="form-control" id="mobile" placeholder="98765 43210" pattern="[0-9]{10}" required />
+                    <div class="invalid-feedback">Enter a valid 10-digit mobile number.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Password</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                    <input type="password" class="form-control border-start-0 ps-0" id="regPass" placeholder="Min. 8 characters" required minlength="8" />
+                    <button class="btn btn-light border toggle-pass" type="button" data-target="regPass"><i class="bi bi-eye"></i></button>
+                    <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                  </div>
+                  <!-- Strength bar -->
+                  <div class="mt-2">
+                    <div class="progress" style="height:4px">
+                      <div class="progress-bar" id="passStrengthBar" style="width:0%;background:#dc3545"></div>
+                    </div>
+                    <small class="text-muted mt-1 d-block" id="passStrengthLabel"></small>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Confirm password</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                    <input type="password" class="form-control border-start-0 ps-0" id="confirmPass" placeholder="Repeat password" required />
+                    <div class="invalid-feedback" id="confirmFeedback">Passwords must match.</div>
+                  </div>
+                </div>
+
+                <!-- Skin type (optional) -->
+                <div class="mb-3">
+                  <label class="form-label fw-medium small">Skin type <span class="text-muted">(optional — helps us personalise)</span></label>
+                  <select class="form-select">
+                    <option value="">Select skin type</option>
+                    <option>Oily</option>
+                    <option>Dry</option>
+                    <option>Combination</option>
+                    <option>Normal</option>
+                    <option>Sensitive</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required />
+                    <label class="form-check-label small" for="termsCheck">I agree to the <a href="#" class="text-dark">Terms & Conditions</a> and <a href="#" class="text-dark">Privacy Policy</a></label>
+                    <div class="invalid-feedback">You must accept the terms to continue.</div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="marketingCheck" />
+                    <label class="form-check-label small" for="marketingCheck">Send me exclusive offers and skincare tips</label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 btn-lg py-3">Create Account</button>
+              </form>
+
+              <div class="alert alert-success mt-3 d-none" id="registerSuccess">
+                <i class="bi bi-check-circle me-2"></i>Account created! Welcome to Lumora.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits Sidebar -->
+    <div class="col-md-10 col-lg-4">
+      <div class="card border-0 bg-dark text-white rounded-4 p-4">
+        <h5 class="fw-semibold mb-4">Member benefits</h5>
+        <div class="d-flex gap-3 mb-3">
+          <div class="benefit-icon"><i class="bi bi-gift fs-5"></i></div>
+          <div>
+            <div class="fw-medium small">Welcome gift</div>
+            <div class="text-white-50 small">₹100 off on your first order</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-3">
+          <div class="benefit-icon"><i class="bi bi-star fs-5"></i></div>
+          <div>
+            <div class="fw-medium small">Lumora Points</div>
+            <div class="text-white-50 small">Earn 1 point per ₹10 spent</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-3">
+          <div class="benefit-icon"><i class="bi bi-clock-history fs-5"></i></div>
+          <div>
+            <div class="fw-medium small">Order history</div>
+            <div class="text-white-50 small">Track and reorder with one click</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div class="benefit-icon"><i class="bi bi-heart fs-5"></i></div>
+          <div>
+            <div class="fw-medium small">Personalised picks</div>
+            <div class="text-white-50 small">Recommendations based on your skin type</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

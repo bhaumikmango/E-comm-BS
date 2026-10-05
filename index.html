@@ -1,113 +1,548 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumora — Premium Lifestyle Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <title>E-Commerce Demo</title>
-  </head>
-  <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3 col-md-4 col-sm-6">
-                <div class="card product-item">
-                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6tZQ0SXZENq7m-r-HFoKSTsftr1xyxuZDwx-fkHaWg&s=10" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Camera</h6>
-                        <h5 class="card-title">Sony WX-5</h5>
-                        <p class="card-text">₹28700
-                            <span class="ml-auto" style="float: right;">rating : <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            </span>
-                        </p>
-                        <a class="btn btn-outline-primary" href="#" role="button">Add to cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                        </svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-4 col-sm-6">
-                <div class="card product-item">
-                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6tZQ0SXZENq7m-r-HFoKSTsftr1xyxuZDwx-fkHaWg&s=10" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Camera</h6>
-                        <h5 class="card-title">Sony WX-5</h5>
-                        <p class="card-text">₹28700
-                            <span class="ml-auto" style="float: right;">rating : <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-4 col-sm-6">
-                <div class="card product-item">
-                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6tZQ0SXZENq7m-r-HFoKSTsftr1xyxuZDwx-fkHaWg&s=10" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Camera</h6>
-                        <h5 class="card-title">Sony WX-5</h5>
-                        <p class="card-text">₹28700
-                            <span class="ml-auto" style="float: right;">rating : <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-4 col-sm-6">
-                <div class="card product-item">
-                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6tZQ0SXZENq7m-r-HFoKSTsftr1xyxuZDwx-fkHaWg&s=10" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Camera</h6>
-                        <h5 class="card-title">Sony WX-5</h5>
-                        <p class="card-text">₹28700
-                            <span class="ml-auto" style="float: right;">rating : <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill rating-stars" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Toast Notification -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+  <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMsg">Item added to cart</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  </div>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar text-center py-2 small">
+  <span>Free shipping on orders over ₹999 &nbsp;|&nbsp; Use code <strong>LUMORA15</strong> for 15% off &nbsp;|&nbsp; </span>
+  <a href="pages/checkout.html" class="text-white">Shop Now →</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html">Lumora</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Collections</a>
+          <ul class="dropdown-menu border-0 shadow-sm">
+            <li><a class="dropdown-item" href="#">Skincare</a></li>
+            <li><a class="dropdown-item" href="#">Wellness</a></li>
+            <li><a class="dropdown-item" href="#">Home & Living</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">All Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Journal</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-link p-0 text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search fs-5"></i></button>
+        <a href="pages/login.html" class="btn btn-link p-0 text-dark"><i class="bi bi-person fs-5"></i></a>
+        <button class="btn btn-link p-0 text-dark position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="cart-badge badge rounded-pill" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg p-2">
+      <div class="modal-body">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+          <input type="text" class="form-control border-start-0 ps-0" placeholder="Search for skincare, wellness, gifts…" />
+          <button class="btn btn-dark px-4" type="button">Search</button>
+        </div>
+        <div class="mt-3">
+          <small class="text-muted">Popular:</small>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Vitamin C Serum</span>
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Face Mask</span>
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Aromatherapy</span>
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Gift Set</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title">Your Bag <span class="badge bg-dark ms-2" id="cartCountCanvas">0</span></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="flex-grow-1">
+      <div id="emptyCart" class="text-center py-5 text-muted">
+        <i class="bi bi-bag-x fs-1 d-block mb-3 opacity-25"></i>
+        <p class="mb-0">Your bag is empty</p>
+        <a href="#" class="btn btn-sm btn-outline-dark mt-3" data-bs-dismiss="offcanvas">Continue Shopping</a>
+      </div>
+    </div>
+    <div id="cartSummary" class="d-none border-top pt-3">
+      <div class="d-flex justify-content-between mb-2 text-muted small">
+        <span>Subtotal</span><span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="d-flex justify-content-between mb-3 fw-semibold">
+        <span>Total</span><span id="cartTotal">₹0</span>
+      </div>
+      <a href="pages/checkout.html" class="btn btn-dark w-100 py-3">Checkout <i class="bi bi-arrow-right ms-1"></i></a>
+      <button class="btn btn-outline-secondary w-100 mt-2" data-bs-dismiss="offcanvas">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Slideshow -->
+<div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active hero-slide" style="background: linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%)">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="row align-items-center w-100">
+          <div class="col-lg-6 text-white py-5">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2">New Arrival</span>
+            <h1 class="hero-headline mb-4">Ritual-grade<br/>skincare, finally<br/>accessible.</h1>
+            <p class="lead text-white-50 mb-4">Formulated by dermatologists. Proven by 50,000+ customers. No compromises on what goes on your skin.</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="pages/product.html" class="btn btn-light px-4 py-3">Shop Collection</a>
+              <a href="#" class="btn btn-outline-light px-4 py-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center py-4">
+            <div class="hero-product-img mx-auto">
+              <div class="product-blob d-flex align-items-center justify-content-center">
+                <span class="display-1">🧴</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide" style="background: linear-gradient(135deg,#2d5016 0%,#3d6b1e 60%,#4a7c25 100%)">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="row align-items-center w-100">
+          <div class="col-lg-6 text-white py-5">
+            <span class="badge bg-light text-dark mb-3 px-3 py-2">Bestseller</span>
+            <h1 class="hero-headline mb-4">Wellness that works from the inside out.</h1>
+            <p class="lead text-white-50 mb-4">Plant-based supplements crafted for modern living. Clean ingredients, real results.</p>
+            <a href="pages/product.html" class="btn btn-warning px-4 py-3">Explore Wellness</a>
+          </div>
+          <div class="col-lg-6 text-center py-4">
+            <div class="hero-product-img mx-auto">
+              <div class="product-blob d-flex align-items-center justify-content-center">
+                <span class="display-1">🌿</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide" style="background: linear-gradient(135deg,#4a2040 0%,#6b2d5e 60%,#8b3a7a 100%)">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="row align-items-center w-100">
+          <div class="col-lg-6 text-white py-5">
+            <span class="badge bg-danger mb-3 px-3 py-2">Limited Edition</span>
+            <h1 class="hero-headline mb-4">Gift sets worth giving. And keeping.</h1>
+            <p class="lead text-white-50 mb-4">Curated sets for every occasion. Free gift wrapping on all orders above ₹1,499.</p>
+            <a href="pages/product.html" class="btn btn-light px-4 py-3">Shop Gift Sets</a>
+          </div>
+          <div class="col-lg-6 text-center py-4">
+            <div class="hero-product-img mx-auto">
+              <div class="product-blob d-flex align-items-center justify-content-center">
+                <span class="display-1">🎁</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Trust Bar -->
+<section class="trust-bar py-3 bg-light border-bottom border-top">
+  <div class="container">
+    <div class="row text-center g-2">
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center gap-2 small text-muted">
+          <i class="bi bi-truck text-dark fs-5"></i><span>Free Shipping ₹999+</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center gap-2 small text-muted">
+          <i class="bi bi-arrow-counterclockwise text-dark fs-5"></i><span>30-Day Returns</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center gap-2 small text-muted">
+          <i class="bi bi-shield-check text-dark fs-5"></i><span>Dermatologist Tested</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center gap-2 small text-muted">
+          <i class="bi bi-award text-dark fs-5"></i><span>Cruelty Free</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Category Tabs -->
+<section class="py-5">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col">
+        <h2 class="section-title mb-1">Shop by Category</h2>
+        <p class="text-muted mb-0">Everything your skin and soul needs</p>
+      </div>
+    </div>
+    <ul class="nav nav-pills mb-4 gap-2" id="categoryTabs">
+      <li class="nav-item">
+        <button class="nav-link active px-4" data-filter="all">All</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link px-4" data-filter="skincare">Skincare</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link px-4" data-filter="wellness">Wellness</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link px-4" data-filter="home">Home & Living</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link px-4" data-filter="gifting">Gifting</button>
+      </li>
+    </ul>
+
+    <!-- Product Grid -->
+    <div class="row g-4" id="productGrid">
+      <!-- Products injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Banner Strip -->
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-8">
+        <span class="text-warning small text-uppercase letter-spacing-wide">Limited time offer</span>
+        <h3 class="display-6 fw-bold mt-2 mb-3">Get 15% off your first order</h3>
+        <p class="text-white-50 mb-0">Join 50,000+ skincare enthusiasts. No spam, ever.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group input-group-lg">
+          <input type="email" class="form-control" placeholder="your@email.com" />
+          <button class="btn btn-warning px-3" type="button">Claim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bestsellers -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex align-items-end justify-content-between mb-4">
+      <div>
+        <h2 class="section-title mb-1">Bestsellers</h2>
+        <p class="text-muted mb-0">Loved by thousands, repurchased by most</p>
+      </div>
+      <a href="pages/product.html" class="btn btn-outline-dark btn-sm">View All</a>
+    </div>
+    <div id="bestsellerCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card product-card border-0 h-100">
+                <div class="card-img-wrap bg-white text-center py-4 position-relative">
+                  <span class="badge bg-success position-absolute top-0 start-0 m-2">Bestseller</span>
+                  <span class="product-emoji">🧴</span>
+                </div>
+                <div class="card-body">
+                  <small class="text-muted">Skincare</small>
+                  <h6 class="card-title mt-1">Vitamin C Brightening Serum</h6>
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <div class="text-warning small">★★★★★</div>
+                    <small class="text-muted">(2,341)</small>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div><span class="fw-bold">₹899</span> <del class="text-muted small">₹1,199</del></div>
+                    <button class="btn btn-dark btn-sm add-to-cart" data-name="Vitamin C Serum" data-price="899">
+                      <i class="bi bi-bag-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card border-0 h-100">
+                <div class="card-img-wrap bg-white text-center py-4 position-relative">
+                  <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                  <span class="product-emoji">🌿</span>
+                </div>
+                <div class="card-body">
+                  <small class="text-muted">Wellness</small>
+                  <h6 class="card-title mt-1">Ashwagandha Sleep Blend</h6>
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <div class="text-warning small">★★★★☆</div>
+                    <small class="text-muted">(987)</small>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div><span class="fw-bold">₹649</span> <del class="text-muted small">₹849</del></div>
+                    <button class="btn btn-dark btn-sm add-to-cart" data-name="Ashwagandha Blend" data-price="649">
+                      <i class="bi bi-bag-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card border-0 h-100">
+                <div class="card-img-wrap bg-white text-center py-4">
+                  <span class="product-emoji">🕯️</span>
+                </div>
+                <div class="card-body">
+                  <small class="text-muted">Home & Living</small>
+                  <h6 class="card-title mt-1">Cedarwood Soy Candle Set</h6>
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <div class="text-warning small">★★★★★</div>
+                    <small class="text-muted">(543)</small>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div><span class="fw-bold">₹1,249</span></div>
+                    <button class="btn btn-dark btn-sm add-to-cart" data-name="Soy Candle Set" data-price="1249">
+                      <i class="bi bi-bag-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features / USP Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-2">Why Lumora?</h2>
+    <p class="text-muted text-center mb-5">Because you deserve more than marketing claims</p>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="usp-card p-4">
+          <div class="usp-icon mb-3">🔬</div>
+          <h5 class="fw-semibold">Science-backed</h5>
+          <p class="text-muted small mb-0">Every formula validated by independent labs. We share the data, not just the claims.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="usp-card p-4">
+          <div class="usp-icon mb-3">🌱</div>
+          <h5 class="fw-semibold">Clean ingredients</h5>
+          <p class="text-muted small mb-0">Zero parabens, sulfates, or silicones. Certified cruelty-free and vegan-friendly.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="usp-card p-4">
+          <div class="usp-icon mb-3">♻️</div>
+          <h5 class="fw-semibold">Sustainable packaging</h5>
+          <p class="text-muted small mb-0">100% recycled and recyclable packaging. We plant one tree for every order placed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-2">What our customers say</h2>
+    <p class="text-muted text-center mb-5">50,000+ happy skin days and counting</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 h-100 p-4 review-card">
+          <div class="text-warning mb-2">★★★★★</div>
+          <p class="mb-3 fst-italic">"The Vitamin C serum genuinely faded my dark spots in 3 weeks. I've tried a dozen others — nothing comes close."</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="avatar-circle">PR</div>
+            <div>
+              <div class="fw-semibold small">Priya R.</div>
+              <div class="text-muted small">Verified buyer · Mumbai</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 h-100 p-4 review-card review-card--featured">
+          <div class="text-warning mb-2">★★★★★</div>
+          <p class="mb-3 fst-italic">"I've been sleeping better since week one of the Ashwagandha blend. No groggy mornings — just actual rest."</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="avatar-circle">AS</div>
+            <div>
+              <div class="fw-semibold small">Arjun S.</div>
+              <div class="text-muted small">Verified buyer · Delhi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 h-100 p-4 review-card">
+          <div class="text-warning mb-2">★★★★★</div>
+          <p class="mb-3 fst-italic">"The candle set was a gift for my sister. She loved it so much she immediately reordered for herself!"</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="avatar-circle">MK</div>
+            <div>
+              <div class="fw-semibold small">Meera K.</div>
+              <div class="text-muted small">Verified buyer · Bangalore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Modal (triggered once) -->
+<div class="modal fade" id="promoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 overflow-hidden">
+      <div class="modal-header-promo text-white p-4">
+        <div>
+          <h4 class="fw-bold mb-1">Welcome to Lumora 🌿</h4>
+          <p class="mb-0 opacity-75 small">Get 15% off your first order</p>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted mb-3">Enter your email below to receive your exclusive discount code instantly.</p>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="your@email.com" />
+          <button class="btn btn-dark" type="button">Get 15% Off</button>
+        </div>
+        <small class="text-muted">No spam. Unsubscribe anytime.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <div class="brand-logo text-white fs-4 mb-3">Lumora</div>
+        <p class="text-white-50 small mb-4">Ritual-grade skincare and wellness products, made accessible. Science-backed, clean, and honest.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white mb-3 small fw-semibold">Shop</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Skincare</a></li>
+          <li><a href="#" class="footer-link">Wellness</a></li>
+          <li><a href="#" class="footer-link">Home & Living</a></li>
+          <li><a href="#" class="footer-link">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white mb-3 small fw-semibold">Support</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Track Order</a></li>
+          <li><a href="#" class="footer-link">Returns</a></li>
+          <li><a href="#" class="footer-link">FAQ</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white mb-3 small fw-semibold">Company</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Journal</a></li>
+          <li><a href="#" class="footer-link">Sustainability</a></li>
+          <li><a href="#" class="footer-link">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white mb-3 small fw-semibold">Legal</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><a href="#" class="footer-link">Terms</a></li>
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-top border-secondary pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <small class="text-white-50">© 2026 Lumora. All rights reserved.</small>
+      <div class="d-flex gap-2">
+        <span class="badge bg-secondary px-2 py-1">💳 Visa</span>
+        <span class="badge bg-secondary px-2 py-1">💳 Mastercard</span>
+        <span class="badge bg-secondary px-2 py-1">📱 UPI</span>
+        <span class="badge bg-secondary px-2 py-1">🏦 Net Banking</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+  // Show promo modal once
+  setTimeout(() => {
+    if (!sessionStorage.getItem('promoShown')) {
+      new bootstrap.Modal(document.getElementById('promoModal')).show();
+      sessionStorage.setItem('promoShown', '1');
+    }
+  }, 3000);
+
+  // Category filter
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      filterProducts(this.dataset.filter);
+    });
+  });
+</script>
+</body>
 </html>

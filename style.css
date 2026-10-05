@@ -1,0 +1,353 @@
+/* ============================================
+   Lumora E-Commerce — Global Styles
+   ============================================ */
+
+:root {
+  --brand-dark: #0e0e10;
+  --brand-accent: #1a1a2e;
+  --brand-mid: #f7f6f3;
+  --text-muted-custom: #6b7280;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+/* ---- Base ---- */
+body {
+  font-family: var(--font-body);
+  color: var(--brand-dark);
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+}
+
+/* ---- Announcement Bar ---- */
+.announcement-bar {
+  background: var(--brand-dark);
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+.announcement-bar a {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- Brand Logo ---- */
+.brand-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.brand-logo:hover { color: var(--brand-dark); }
+
+/* ---- Navbar ---- */
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #f3f4f6;
+  color: var(--brand-dark);
+}
+
+/* ---- Cart Badge ---- */
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 0.65rem;
+  background: #dc2626;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 5px;
+}
+
+/* ---- Hero Slide ---- */
+.hero-slide {
+  min-height: 560px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+.hero-product-img {
+  max-width: 360px;
+}
+.product-blob {
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+  margin: auto;
+}
+
+/* ---- Section Title ---- */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* ---- Product Card ---- */
+.product-card {
+  border-radius: var(--radius-lg) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+}
+.card-img-wrap {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.product-emoji {
+  font-size: 5rem;
+  display: block;
+  line-height: 1;
+}
+
+/* ---- Add to cart animation ---- */
+.add-to-cart {
+  transition: transform 0.15s;
+}
+.add-to-cart:active {
+  transform: scale(0.92);
+}
+
+/* ---- USP Cards ---- */
+.usp-card {
+  border-radius: var(--radius-lg);
+  background: var(--brand-mid);
+  transition: transform 0.2s;
+}
+.usp-card:hover {
+  transform: translateY(-3px);
+}
+.usp-icon {
+  font-size: 2.5rem;
+}
+
+/* ---- Review Cards ---- */
+.review-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.review-card--featured {
+  background: var(--brand-dark);
+  color: #fff;
+}
+.review-card--featured .text-muted { color: rgba(255,255,255,0.6) !important; }
+
+/* ---- Avatar Circle ---- */
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.avatar-circle.sm {
+  width: 32px;
+  height: 32px;
+  font-size: 0.65rem;
+}
+
+/* ---- Footer Links ---- */
+.footer-link {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: #fff; }
+
+/* ---- Promo Modal Header ---- */
+.modal-header-promo {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* ---- Product Detail Page ---- */
+.product-detail-img {
+  height: 420px;
+  background: #f7f6f3;
+}
+.thumb-btn {
+  width: 72px;
+  height: 72px;
+}
+.thumb-img {
+  width: 72px;
+  height: 72px;
+  font-size: 1.5rem;
+}
+.product-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 600;
+}
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--brand-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* ---- Login Page ---- */
+.divider-text {
+  position: relative;
+  text-align: center;
+}
+.divider-text::before,
+.divider-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: #e5e7eb;
+}
+.divider-text::before { left: 0; }
+.divider-text::after { right: 0; }
+
+.benefit-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+/* ---- Password Strength ---- */
+#passStrengthBar { transition: width 0.3s, background 0.3s; }
+
+/* ---- Checkout Page ---- */
+.step-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand-dark);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.address-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.address-card:has(input:checked) {
+  border-color: var(--brand-dark);
+  background: #f9fafb;
+}
+.delivery-option {
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.delivery-option:has(input:checked) {
+  border-color: var(--brand-dark) !important;
+  background: #f9fafb;
+}
+.order-thumb {
+  width: 56px;
+  height: 56px;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+.bank-option {
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.bank-option:has(input:checked) {
+  border-color: var(--brand-dark);
+  background: #f9fafb;
+}
+
+/* ---- Trust bar ---- */
+.trust-bar { font-size: 0.85rem; }
+
+/* ---- Cart Offcanvas ---- */
+.cart-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* ---- Nav pills custom ---- */
+.nav-pills .nav-link {
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--brand-dark);
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+.nav-pills .nav-link:not(.active):hover {
+  border-color: #e5e7eb;
+}
+.nav-pills .nav-link.active {
+  background: var(--brand-dark);
+}
+
+/* ---- Letter spacing ---- */
+.letter-spacing-wide { letter-spacing: 0.08em; }
+
+/* ---- Cursor ---- */
+.cursor-pointer { cursor: pointer; }
+
+/* ---- Accordion clean ---- */
+.accordion-button:focus { box-shadow: none; }
+.accordion-button:not(.collapsed) { color: var(--brand-dark); box-shadow: none; }
+
+/* ---- Responsive ---- */
+@media (max-width: 767px) {
+  .hero-slide { min-height: 480px; }
+  .product-detail-img { height: 260px; }
+  .hero-headline { font-size: 1.8rem; }
+}

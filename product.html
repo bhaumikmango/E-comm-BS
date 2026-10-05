@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamin C Brightening Serum — Lumora</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+  <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMsg">Item added to cart</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar text-center py-2 small">
+  <span>Free shipping on orders over ₹999 &nbsp;|&nbsp; Use code <strong>LUMORA15</strong> for 15% off</span>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="../index.html">Lumora</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="login.html" class="btn btn-link p-0 text-dark"><i class="bi bi-person fs-5"></i></a>
+        <button class="btn btn-link p-0 text-dark position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="cart-badge badge rounded-pill" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title">Your Bag <span class="badge bg-dark ms-2" id="cartCountCanvas">0</span></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="flex-grow-1">
+      <div id="emptyCart" class="text-center py-5 text-muted">
+        <i class="bi bi-bag-x fs-1 d-block mb-3 opacity-25"></i>
+        <p>Your bag is empty</p>
+        <a href="../index.html" class="btn btn-sm btn-outline-dark" data-bs-dismiss="offcanvas">Continue Shopping</a>
+      </div>
+    </div>
+    <div id="cartSummary" class="d-none border-top pt-3">
+      <div class="d-flex justify-content-between mb-2 text-muted small"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <div class="d-flex justify-content-between mb-3 fw-semibold"><span>Total</span><span id="cartTotal">₹0</span></div>
+      <a href="checkout.html" class="btn btn-dark w-100 py-3">Checkout <i class="bi bi-arrow-right ms-1"></i></a>
+      <button class="btn btn-outline-secondary w-100 mt-2" data-bs-dismiss="offcanvas">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- Breadcrumb -->
+<div class="container mt-3 mb-0">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb small">
+      <li class="breadcrumb-item"><a href="../index.html" class="text-dark">Home</a></li>
+      <li class="breadcrumb-item"><a href="#" class="text-dark">Skincare</a></li>
+      <li class="breadcrumb-item active">Vitamin C Serum</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- Product Detail -->
+<section class="py-4">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Left: Images -->
+      <div class="col-lg-6">
+        <div id="productImgCarousel" class="carousel slide rounded-4 overflow-hidden bg-light" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="product-detail-img d-flex align-items-center justify-content-center">
+                <span style="font-size:9rem">🧴</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="product-detail-img d-flex align-items-center justify-content-center" style="background:#f0f0f0">
+                <span style="font-size:9rem">✨</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="product-detail-img d-flex align-items-center justify-content-center" style="background:#e8f4e8">
+                <span style="font-size:9rem">🌿</span>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#productImgCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#productImgCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <!-- Thumbnails -->
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn p-0 border-2 border-dark rounded-3 overflow-hidden thumb-btn" data-bs-target="#productImgCarousel" data-bs-slide-to="0">
+            <div class="thumb-img bg-light d-flex align-items-center justify-content-center"><span>🧴</span></div>
+          </button>
+          <button class="btn p-0 border rounded-3 overflow-hidden thumb-btn" data-bs-target="#productImgCarousel" data-bs-slide-to="1">
+            <div class="thumb-img bg-light d-flex align-items-center justify-content-center"><span>✨</span></div>
+          </button>
+          <button class="btn p-0 border rounded-3 overflow-hidden thumb-btn" data-bs-target="#productImgCarousel" data-bs-slide-to="2">
+            <div class="thumb-img bg-light d-flex align-items-center justify-content-center"><span>🌿</span></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Details -->
+      <div class="col-lg-6">
+        <span class="badge bg-success mb-3 px-3 py-2">Bestseller — 2,341 sold</span>
+        <h1 class="product-title mb-2">Vitamin C Brightening Serum</h1>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="text-warning">★★★★★</div>
+          <span class="text-muted small">4.9 (2,341 reviews)</span>
+          <a href="#reviews" class="text-dark small">Read reviews</a>
+        </div>
+
+        <!-- Price -->
+        <div class="d-flex align-items-baseline gap-2 mb-4">
+          <span class="fs-2 fw-bold">₹899</span>
+          <del class="text-muted fs-5">₹1,199</del>
+          <span class="badge bg-danger ms-1">25% off</span>
+        </div>
+
+        <!-- Size Selector -->
+        <div class="mb-4">
+          <p class="small fw-semibold mb-2">Size</p>
+          <div class="d-flex gap-2">
+            <input type="radio" class="btn-check" name="size" id="s30" value="30ml" checked />
+            <label class="btn btn-outline-dark btn-sm rounded-pill px-3" for="s30">30ml</label>
+            <input type="radio" class="btn-check" name="size" id="s50" value="50ml" />
+            <label class="btn btn-outline-dark btn-sm rounded-pill px-3" for="s50">50ml <span class="text-muted">+₹200</span></label>
+          </div>
+        </div>
+
+        <!-- Qty -->
+        <div class="mb-4">
+          <p class="small fw-semibold mb-2">Quantity</p>
+          <div class="input-group w-auto" style="max-width:140px">
+            <button class="btn btn-outline-dark" type="button" id="qtyMinus">−</button>
+            <input type="number" class="form-control text-center border-dark" id="qty" value="1" min="1" max="10" />
+            <button class="btn btn-outline-dark" type="button" id="qtyPlus">+</button>
+          </div>
+        </div>
+
+        <!-- Skin Type -->
+        <div class="mb-4">
+          <p class="small fw-semibold mb-2">Best for skin type</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Oily</span>
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Combination</span>
+            <span class="badge rounded-pill border text-dark fw-normal px-3 py-2">Normal</span>
+            <span class="badge rounded-pill bg-dark text-white fw-normal px-3 py-2">Dry ✓</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="d-grid gap-2 mb-4">
+          <button class="btn btn-dark btn-lg py-3 add-to-cart" id="mainAddToCart" data-name="Vitamin C Brightening Serum" data-price="899">
+            <i class="bi bi-bag-plus me-2"></i>Add to Bag
+          </button>
+          <button class="btn btn-outline-dark btn-lg py-3">
+            <i class="bi bi-lightning me-2"></i>Buy Now
+          </button>
+        </div>
+
+        <!-- Wishlist / Share -->
+        <div class="d-flex gap-3 text-muted small mb-4">
+          <button class="btn btn-link text-muted p-0 small"><i class="bi bi-heart me-1"></i>Save to Wishlist</button>
+          <button class="btn btn-link text-muted p-0 small"><i class="bi bi-share me-1"></i>Share</button>
+        </div>
+
+        <!-- Delivery Info -->
+        <div class="alert alert-light border small">
+          <i class="bi bi-truck me-2 text-success"></i><strong>Free delivery</strong> on this order · Estimated <strong>2–4 working days</strong>
+        </div>
+
+        <!-- Guarantee Badges -->
+        <div class="d-flex flex-wrap gap-3 mt-3 text-muted small">
+          <span><i class="bi bi-shield-check me-1 text-success"></i>Dermatologist tested</span>
+          <span><i class="bi bi-arrow-counterclockwise me-1 text-primary"></i>30-day return</span>
+          <span><i class="bi bi-award me-1 text-warning"></i>Cruelty free</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Info Tabs -->
+<section class="py-5 border-top">
+  <div class="container">
+    <ul class="nav nav-tabs mb-4" id="productTabs">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description">Description</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#ingredients">Ingredients</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#howto">How to use</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">Reviews</button></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="description">
+        <div class="row g-4">
+          <div class="col-md-7">
+            <h5 class="fw-semibold mb-3">What it does</h5>
+            <p class="text-muted">Our Vitamin C Brightening Serum harnesses the power of 15% L-Ascorbic Acid, the most clinically-proven form of Vitamin C, to visibly brighten skin, fade hyperpigmentation, and defend against environmental stressors.</p>
+            <p class="text-muted">Formulated with Ferulic Acid to stabilise Vitamin C and enhance its efficacy, plus Niacinamide (5%) for barrier support and oil control.</p>
+            <h5 class="fw-semibold mt-4 mb-3">Key benefits</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Brightens dull skin and reduces dark spots</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Reduces appearance of fine lines</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Boosts collagen production</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Antioxidant protection from free radicals</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Improves overall skin texture</li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <div class="bg-light rounded-4 p-4">
+              <h6 class="fw-semibold mb-3">Clinical results after 8 weeks</h6>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small mb-1"><span>Reduction in dark spots</span><span class="fw-semibold">87%</span></div>
+                <div class="progress" style="height:6px"><div class="progress-bar bg-dark" style="width:87%"></div></div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small mb-1"><span>Improved radiance</span><span class="fw-semibold">92%</span></div>
+                <div class="progress" style="height:6px"><div class="progress-bar bg-dark" style="width:92%"></div></div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small mb-1"><span>Smoother texture</span><span class="fw-semibold">79%</span></div>
+                <div class="progress" style="height:6px"><div class="progress-bar bg-dark" style="width:79%"></div></div>
+              </div>
+              <small class="text-muted">Based on 120 participants in independent dermatology trial</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="ingredients">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="fw-semibold mb-3">Key ingredients</h5>
+            <div class="accordion" id="ingrAccordion">
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button px-0 bg-transparent fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#ingr1">15% L-Ascorbic Acid</button>
+                </h2>
+                <div id="ingr1" class="accordion-collapse collapse show" data-bs-parent="#ingrAccordion">
+                  <div class="accordion-body px-0 text-muted small">The gold-standard form of Vitamin C, clinically proven to brighten and firm skin. More potent than derivatives like Ascorbyl Glucoside.</div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button px-0 bg-transparent fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ingr2">Ferulic Acid (1%)</button>
+                </h2>
+                <div id="ingr2" class="accordion-collapse collapse" data-bs-parent="#ingrAccordion">
+                  <div class="accordion-body px-0 text-muted small">Stabilises Vitamin C and doubles its antioxidant protection. Also provides its own UV protection benefits.</div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button px-0 bg-transparent fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ingr3">Niacinamide (5%)</button>
+                </h2>
+                <div id="ingr3" class="accordion-collapse collapse" data-bs-parent="#ingrAccordion">
+                  <div class="accordion-body px-0 text-muted small">Strengthens the skin barrier, minimises pores and controls sebum production while working synergistically with Vitamin C.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 class="fw-semibold mb-3">What's not in it</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Parabens</span>
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Sulfates</span>
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Silicones</span>
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Artificial fragrance</span>
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Mineral oil</span>
+              <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-x-circle text-danger me-1"></i>Animal derivatives</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="howto">
+        <div class="row g-4">
+          <div class="col-md-7">
+            <h5 class="fw-semibold mb-4">How to use</h5>
+            <div class="d-flex gap-3 mb-4">
+              <div class="step-circle flex-shrink-0">1</div>
+              <div>
+                <h6 class="fw-semibold">Cleanse</h6>
+                <p class="text-muted small mb-0">Apply to clean, dry skin. Use after your cleanser and toner.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-4">
+              <div class="step-circle flex-shrink-0">2</div>
+              <div>
+                <h6 class="fw-semibold">Apply 3–4 drops</h6>
+                <p class="text-muted small mb-0">Dispense 3–4 drops onto fingertips. Gently press into face, neck and décolletage.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-4">
+              <div class="step-circle flex-shrink-0">3</div>
+              <div>
+                <h6 class="fw-semibold">Moisturise and protect</h6>
+                <p class="text-muted small mb-0">Follow with your moisturiser. Always use SPF 30+ during the day.</p>
+              </div>
+            </div>
+            <div class="alert alert-warning small">
+              <i class="bi bi-lightbulb me-1"></i><strong>Pro tip:</strong> Use morning and evening. Results visible in 3–4 weeks with consistent use.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="reviews">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="text-center p-4 bg-light rounded-4">
+              <div class="display-3 fw-bold">4.9</div>
+              <div class="text-warning fs-4 mb-2">★★★★★</div>
+              <p class="text-muted small">2,341 verified reviews</p>
+              <div class="text-start mt-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <small class="text-nowrap">5 ★</small>
+                  <div class="progress flex-grow-1" style="height:8px"><div class="progress-bar bg-warning" style="width:88%"></div></div>
+                  <small class="text-nowrap text-muted">88%</small>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <small class="text-nowrap">4 ★</small>
+                  <div class="progress flex-grow-1" style="height:8px"><div class="progress-bar bg-warning" style="width:8%"></div></div>
+                  <small class="text-nowrap text-muted">8%</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <small class="text-nowrap">3 ★</small>
+                  <div class="progress flex-grow-1" style="height:8px"><div class="progress-bar bg-warning" style="width:4%"></div></div>
+                  <small class="text-nowrap text-muted">4%</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="review-item pb-4 border-bottom mb-4">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="avatar-circle sm">PR</div>
+                  <strong class="small">Priya R.</strong>
+                  <span class="badge bg-success small">Verified</span>
+                </div>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <div class="text-warning small mb-2">★★★★★</div>
+              <p class="small text-muted mb-0">"The Vitamin C serum genuinely faded my dark spots in 3 weeks. I've tried a dozen others — nothing comes close. The texture is light, absorbs instantly, and doesn't pill under makeup."</p>
+            </div>
+            <div class="review-item pb-4 border-bottom mb-4">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="avatar-circle sm">NK</div>
+                  <strong class="small">Neha K.</strong>
+                  <span class="badge bg-success small">Verified</span>
+                </div>
+                <small class="text-muted">1 week ago</small>
+              </div>
+              <div class="text-warning small mb-2">★★★★★</div>
+              <p class="small text-muted mb-0">"Used this for a month and the difference is visible. My skin is glowing, my colleagues have been asking what I'm using. Worth every rupee."</p>
+            </div>
+            <div class="review-item">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="avatar-circle sm">RS</div>
+                  <strong class="small">Rahul S.</strong>
+                  <span class="badge bg-success small">Verified</span>
+                </div>
+                <small class="text-muted">2 weeks ago</small>
+              </div>
+              <div class="text-warning small mb-2">★★★★☆</div>
+              <p class="small text-muted mb-0">"Great product, noticeable results. Took about 5 weeks to see significant improvement but it's there. Would buy again."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-2">You might also like</h2>
+    <p class="text-muted mb-4">Frequently bought together</p>
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="card product-card border-0 h-100">
+          <div class="card-img-wrap bg-white text-center py-4"><span class="product-emoji">🌿</span></div>
+          <div class="card-body">
+            <small class="text-muted">Wellness</small>
+            <h6 class="card-title mt-1">Ashwagandha Sleep Blend</h6>
+            <div class="d-flex align-items-center justify-content-between mt-2">
+              <span class="fw-bold">₹649</span>
+              <button class="btn btn-dark btn-sm add-to-cart" data-name="Ashwagandha Blend" data-price="649"><i class="bi bi-bag-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card border-0 h-100">
+          <div class="card-img-wrap bg-white text-center py-4"><span class="product-emoji">🧖</span></div>
+          <div class="card-body">
+            <small class="text-muted">Skincare</small>
+            <h6 class="card-title mt-1">Hyaluronic Acid Moisturiser</h6>
+            <div class="d-flex align-items-center justify-content-between mt-2">
+              <span class="fw-bold">₹799</span>
+              <button class="btn btn-dark btn-sm add-to-cart" data-name="HA Moisturiser" data-price="799"><i class="bi bi-bag-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card border-0 h-100">
+          <div class="card-img-wrap bg-white text-center py-4"><span class="product-emoji">☀️</span></div>
+          <div class="card-body">
+            <small class="text-muted">Skincare</small>
+            <h6 class="card-title mt-1">SPF 50 Sunscreen Gel</h6>
+            <div class="d-flex align-items-center justify-content-between mt-2">
+              <span class="fw-bold">₹549</span>
+              <button class="btn btn-dark btn-sm add-to-cart" data-name="SPF 50 Sunscreen" data-price="549"><i class="bi bi-bag-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card border-0 h-100">
+          <div class="card-img-wrap bg-white text-center py-4"><span class="product-emoji">🌙</span></div>
+          <div class="card-body">
+            <small class="text-muted">Skincare</small>
+            <h6 class="card-title mt-1">Retinol Night Repair Serum</h6>
+            <div class="d-flex align-items-center justify-content-between mt-2">
+              <span class="fw-bold">₹949</span>
+              <button class="btn btn-dark btn-sm add-to-cart" data-name="Retinol Serum" data-price="949"><i class="bi bi-bag-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <div class="brand-logo text-white fs-5 mb-2">Lumora</div>
+    <p class="text-white-50 small mb-0">© 2026 Lumora. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="../js/cart.js"></script>
+<script>
+  // Qty controls
+  document.getElementById('qtyMinus').addEventListener('click', () => {
+    const q = document.getElementById('qty');
+    if (parseInt(q.value) > 1) q.value = parseInt(q.value) - 1;
+  });
+  document.getElementById('qtyPlus').addEventListener('click', () => {
+    const q = document.getElementById('qty');
+    if (parseInt(q.value) < 10) q.value = parseInt(q.value) + 1;
+  });
+
+  // Thumbnail active state
+  document.querySelectorAll('.thumb-btn').forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('border-dark','border-2'));
+      btn.classList.add('border-dark','border-2');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Lumora</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar bg-white border-bottom px-4 py-3 mb-0">
+  <a class="navbar-brand brand-logo" href="../index.html">Lumora</a>
+  <div class="d-none d-md-flex align-items-center gap-4 small text-muted">
+    <span class="checkout-step active"><i class="bi bi-check-circle-fill text-success me-1"></i>Bag</span>
+    <i class="bi bi-chevron-right"></i>
+    <span class="checkout-step active">Shipping</span>
+    <i class="bi bi-chevron-right"></i>
+    <span class="checkout-step text-muted">Payment</span>
+    <i class="bi bi-chevron-right"></i>
+    <span class="checkout-step text-muted">Confirm</span>
+  </div>
+  <div class="d-flex align-items-center gap-2 text-muted small">
+    <i class="bi bi-lock-fill text-success"></i> Secure checkout
+  </div>
+</nav>
+
+<div class="container py-4">
+  <div class="row g-4 align-items-start">
+    <!-- Left: Form -->
+    <div class="col-lg-7">
+
+      <!-- Step 1: Contact -->
+      <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+          <h5 class="fw-semibold mb-1 d-flex align-items-center gap-2">
+            <span class="step-badge">1</span> Contact details
+          </h5>
+          <p class="text-muted small mb-4">We'll send your order confirmation here</p>
+          <div class="row g-3">
+            <div class="col-6">
+              <label class="form-label small fw-medium">First name</label>
+              <input type="text" class="form-control" placeholder="Priya" />
+            </div>
+            <div class="col-6">
+              <label class="form-label small fw-medium">Last name</label>
+              <input type="text" class="form-control" placeholder="Sharma" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-medium">Email</label>
+              <input type="email" class="form-control" placeholder="you@email.com" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-medium">Mobile</label>
+              <div class="input-group">
+                <span class="input-group-text">+91</span>
+                <input type="tel" class="form-control" placeholder="98765 43210" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Shipping -->
+      <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+          <h5 class="fw-semibold mb-1 d-flex align-items-center gap-2">
+            <span class="step-badge">2</span> Shipping address
+          </h5>
+          <p class="text-muted small mb-4">Where should we send your order?</p>
+
+          <!-- Saved Addresses -->
+          <div class="mb-3">
+            <div class="form-check address-card mb-2">
+              <input class="form-check-input" type="radio" name="addr" id="addr1" checked />
+              <label class="form-check-label w-100" for="addr1">
+                <div class="d-flex justify-content-between">
+                  <strong class="small">Home</strong>
+                  <span class="badge bg-success small">Default</span>
+                </div>
+                <div class="text-muted small">42, Shahibaug Road, Ahmedabad, Gujarat — 380004</div>
+              </label>
+            </div>
+            <div class="form-check address-card mb-3">
+              <input class="form-check-input" type="radio" name="addr" id="addr2" />
+              <label class="form-check-label w-100" for="addr2">
+                <strong class="small">Office</strong>
+                <div class="text-muted small">704, SG Highway, Bodakdev, Ahmedabad — 380054</div>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-outline-dark btn-sm mb-4" data-bs-toggle="collapse" data-bs-target="#newAddrForm">
+            <i class="bi bi-plus me-1"></i>Add new address
+          </button>
+
+          <div class="collapse" id="newAddrForm">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label small fw-medium">Address line 1</label>
+                <input type="text" class="form-control" placeholder="Flat / House no., Building, Street" />
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-medium">Address line 2 <span class="text-muted">(optional)</span></label>
+                <input type="text" class="form-control" placeholder="Area, Landmark" />
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-medium">City</label>
+                <input type="text" class="form-control" placeholder="Ahmedabad" />
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-medium">State</label>
+                <select class="form-select">
+                  <option>Gujarat</option>
+                  <option>Maharashtra</option>
+                  <option>Delhi</option>
+                  <option>Karnataka</option>
+                  <option>Tamil Nadu</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label small fw-medium">PIN code</label>
+                <input type="text" class="form-control" placeholder="380004" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Options -->
+          <h6 class="fw-semibold mt-4 mb-3">Delivery option</h6>
+          <div class="d-flex flex-column gap-2">
+            <label class="delivery-option d-flex align-items-center gap-3 p-3 rounded-3 border cursor-pointer">
+              <input type="radio" name="delivery" class="form-check-input mt-0" checked />
+              <div class="flex-grow-1">
+                <div class="fw-medium small">Standard Delivery</div>
+                <div class="text-muted small">2–4 working days</div>
+              </div>
+              <span class="fw-semibold text-success">Free</span>
+            </label>
+            <label class="delivery-option d-flex align-items-center gap-3 p-3 rounded-3 border cursor-pointer">
+              <input type="radio" name="delivery" class="form-check-input mt-0" />
+              <div class="flex-grow-1">
+                <div class="fw-medium small">Express Delivery</div>
+                <div class="text-muted small">Next working day by 6 PM</div>
+              </div>
+              <span class="fw-semibold">₹99</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Payment -->
+      <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+          <h5 class="fw-semibold mb-1 d-flex align-items-center gap-2">
+            <span class="step-badge">3</span> Payment
+            <i class="bi bi-shield-lock-fill text-success ms-auto small"></i>
+          </h5>
+          <p class="text-muted small mb-4">Your payment information is encrypted</p>
+
+          <ul class="nav nav-pills gap-2 mb-4" id="paymentTabs">
+            <li class="nav-item">
+              <button class="nav-link active small px-3 py-2" data-bs-toggle="tab" data-bs-target="#cardPay">
+                <i class="bi bi-credit-card me-1"></i>Card
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link small px-3 py-2" data-bs-toggle="tab" data-bs-target="#upiPay">
+                <i class="bi bi-phone me-1"></i>UPI
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link small px-3 py-2" data-bs-toggle="tab" data-bs-target="#netbankPay">
+                <i class="bi bi-bank me-1"></i>Net Banking
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link small px-3 py-2" data-bs-toggle="tab" data-bs-target="#codPay">
+                Cash on Delivery
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- Card -->
+            <div class="tab-pane fade show active" id="cardPay">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label small fw-medium">Card number</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" id="cardNum" />
+                    <span class="input-group-text" id="cardType"><i class="bi bi-credit-card text-muted"></i></span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-medium">Name on card</label>
+                  <input type="text" class="form-control" placeholder="PRIYA SHARMA" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-medium">Expiry</label>
+                  <input type="text" class="form-control" placeholder="MM / YY" maxlength="7" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-medium">CVV</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" placeholder="•••" maxlength="3" />
+                    <span class="input-group-text" data-bs-toggle="tooltip" title="3-digit code on back of card"><i class="bi bi-question-circle text-muted"></i></span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="saveCard" />
+                    <label class="form-check-label small" for="saveCard">Save card for future purchases</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- UPI -->
+            <div class="tab-pane fade" id="upiPay">
+              <div class="mb-3">
+                <label class="form-label small fw-medium">UPI ID</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="yourname@upi" />
+                  <button class="btn btn-outline-dark" type="button">Verify</button>
+                </div>
+              </div>
+              <div class="row g-2 mt-1">
+                <div class="col-6 col-sm-3">
+                  <div class="border rounded-3 p-3 text-center cursor-pointer">
+                    <div class="small fw-medium">Google Pay</div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <div class="border rounded-3 p-3 text-center cursor-pointer">
+                    <div class="small fw-medium">PhonePe</div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <div class="border rounded-3 p-3 text-center cursor-pointer">
+                    <div class="small fw-medium">Paytm</div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <div class="border rounded-3 p-3 text-center cursor-pointer">
+                    <div class="small fw-medium">BHIM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Net Banking -->
+            <div class="tab-pane fade" id="netbankPay">
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <div class="form-check bank-option border rounded-3 p-3">
+                    <input class="form-check-input" type="radio" name="bank" id="sbi" />
+                    <label class="form-check-label small fw-medium" for="sbi">SBI</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check bank-option border rounded-3 p-3">
+                    <input class="form-check-input" type="radio" name="bank" id="hdfc" />
+                    <label class="form-check-label small fw-medium" for="hdfc">HDFC</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check bank-option border rounded-3 p-3">
+                    <input class="form-check-input" type="radio" name="bank" id="icici" />
+                    <label class="form-check-label small fw-medium" for="icici">ICICI</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check bank-option border rounded-3 p-3">
+                    <input class="form-check-input" type="radio" name="bank" id="axis" />
+                    <label class="form-check-label small fw-medium" for="axis">Axis Bank</label>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-0">
+                <label class="form-label small fw-medium">Or select another bank</label>
+                <select class="form-select">
+                  <option>Select bank</option>
+                  <option>Kotak Mahindra</option>
+                  <option>Yes Bank</option>
+                  <option>Bank of Baroda</option>
+                  <option>Punjab National Bank</option>
+                </select>
+              </div>
+            </div>
+            <!-- COD -->
+            <div class="tab-pane fade" id="codPay">
+              <div class="alert alert-warning d-flex gap-3 align-items-start">
+                <i class="bi bi-info-circle-fill mt-1"></i>
+                <div>
+                  <strong>Cash on Delivery available</strong>
+                  <p class="mb-0 small">Additional ₹50 handling fee applies. Pay with cash or card when your order arrives.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promo Code -->
+          <div class="mt-4 pt-4 border-top">
+            <label class="form-label small fw-medium">Promo / Gift code</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter code" id="promoCode" />
+              <button class="btn btn-outline-dark" type="button" id="applyPromo">Apply</button>
+            </div>
+            <div class="mt-2 d-none" id="promoSuccess">
+              <span class="badge bg-success px-3 py-2"><i class="bi bi-check me-1"></i>LUMORA15 applied — 15% off</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Place Order -->
+      <button class="btn btn-dark btn-lg w-100 py-4" id="placeOrderBtn">
+        <i class="bi bi-lock me-2"></i>Place Order · ₹<span id="finalTotal">899</span>
+      </button>
+      <p class="text-muted text-center small mt-3">
+        <i class="bi bi-shield-check me-1 text-success"></i>SSL secured · By placing this order you agree to our <a href="#" class="text-dark">Terms</a>
+      </p>
+    </div>
+
+    <!-- Right: Order Summary -->
+    <div class="col-lg-5">
+      <div class="card border-0 shadow-sm rounded-4 sticky-top" style="top:80px">
+        <div class="card-body p-4">
+          <h5 class="fw-semibold mb-4">Order summary</h5>
+
+          <!-- Sample items -->
+          <div class="d-flex gap-3 align-items-start mb-3">
+            <div class="order-thumb bg-light rounded-3 d-flex align-items-center justify-content-center flex-shrink-0">
+              <span>🧴</span>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-medium small">Vitamin C Brightening Serum</div>
+              <div class="text-muted small">30ml · Qty 1</div>
+            </div>
+            <div class="fw-semibold small">₹899</div>
+          </div>
+          <div class="d-flex gap-3 align-items-start mb-4 pb-4 border-bottom">
+            <div class="order-thumb bg-light rounded-3 d-flex align-items-center justify-content-center flex-shrink-0">
+              <span>☀️</span>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-medium small">SPF 50 Sunscreen Gel</div>
+              <div class="text-muted small">Qty 1</div>
+            </div>
+            <div class="fw-semibold small">₹549</div>
+          </div>
+
+          <!-- Totals -->
+          <div class="d-flex justify-content-between small mb-2">
+            <span class="text-muted">Subtotal (2 items)</span>
+            <span>₹1,448</span>
+          </div>
+          <div class="d-flex justify-content-between small mb-2">
+            <span class="text-muted">Shipping</span>
+            <span class="text-success">Free</span>
+          </div>
+          <div class="d-flex justify-content-between small mb-2 d-none" id="discountRow">
+            <span class="text-muted">Discount (LUMORA15)</span>
+            <span class="text-danger">−₹217</span>
+          </div>
+          <div class="d-flex justify-content-between small mb-2">
+            <span class="text-muted">GST (18%)</span>
+            <span>₹261</span>
+          </div>
+          <div class="d-flex justify-content-between fw-bold mt-3 pt-3 border-top">
+            <span>Total</span>
+            <span id="orderTotal">₹1,709</span>
+          </div>
+        </div>
+
+        <!-- Trust -->
+        <div class="card-footer bg-light border-0 rounded-bottom-4 px-4 py-3">
+          <div class="row text-center g-2 small text-muted">
+            <div class="col-4"><i class="bi bi-truck d-block mb-1 text-dark fs-6"></i>Free shipping</div>
+            <div class="col-4"><i class="bi bi-shield-check d-block mb-1 text-dark fs-6"></i>Secure pay</div>
+            <div class="col-4"><i class="bi bi-arrow-counterclockwise d-block mb-1 text-dark fs-6"></i>Easy returns</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Order Success Modal -->
+<div class="modal fade" id="orderSuccessModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 text-center p-4 rounded-4">
+      <div class="mb-3" style="font-size:4rem">🎉</div>
+      <h4 class="fw-bold mb-2">Order placed!</h4>
+      <p class="text-muted mb-1">Your order <strong>#LUM2026-1021</strong> is confirmed.</p>
+      <p class="text-muted small mb-4">You'll receive a confirmation on your email and WhatsApp shortly.</p>
+      <div class="progress mb-3" style="height:8px">
+        <div class="progress-bar bg-success" style="width:25%"></div>
+      </div>
+      <div class="d-flex justify-content-between small text-muted mb-4">
+        <span>✅ Confirmed</span><span>📦 Packed</span><span>🚚 Shipped</span><span>🏠 Delivered</span>
+      </div>
+      <a href="../index.html" class="btn btn-dark w-100">Continue Shopping</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+
+  // Promo code
+  document.getElementById('applyPromo').addEventListener('click', () => {
+    const code = document.getElementById('promoCode').value.trim().toUpperCase();
+    if (code === 'LUMORA15') {
+      document.getElementById('promoSuccess').classList.remove('d-none');
+      document.getElementById('discountRow').classList.remove('d-none');
+      document.getElementById('orderTotal').textContent = '₹1,492';
+      document.getElementById('finalTotal').textContent = '1,492';
+    }
+  });
+
+  // Card number formatting
+  document.getElementById('cardNum').addEventListener('input', function () {
+    let v = this.value.replace(/\D/g, '').match(/.{1,4}/g);
+    this.value = v ? v.join(' ') : '';
+    const icon = document.getElementById('cardType');
+    if (this.value.startsWith('4')) icon.innerHTML = '<span class="small text-primary fw-bold">VISA</span>';
+    else if (this.value.startsWith('5')) icon.innerHTML = '<span class="small text-warning fw-bold">MC</span>';
+    else icon.innerHTML = '<i class="bi bi-credit-card text-muted"></i>';
+  });
+
+  // Place order
+  document.getElementById('placeOrderBtn').addEventListener('click', () => {
+    new bootstrap.Modal(document.getElementById('orderSuccessModal')).show();
+  });
+</script>
+</body>
+</html>
